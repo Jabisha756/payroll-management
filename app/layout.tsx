@@ -1,14 +1,15 @@
-import './globals.css'
+import { ReactNode } from "react";
 
-export const metadata = {
-  title: 'Payroll Management System',
-  description: 'Admin and Employee Payroll Dashboard',
-}
+type RootLayoutProps = {
+  children: ReactNode;
+};
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="flex items-center justify-center min-h-screen">{children}</body>
+      <body className="flex items-center justify-center min-h-screen">
+        {children}
+      </body>
     </html>
-  )
+  );
 }
